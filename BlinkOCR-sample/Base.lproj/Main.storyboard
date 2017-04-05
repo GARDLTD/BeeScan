@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -258,9 +259,17 @@
                             <outlet property="delegate" destination="7AO-Og-p6O" id="GrO-Xo-NQG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ygy-Iq-ahZ">
-                        <barButtonItem key="leftBarButtonItem" title="Retake Photo" id="LYs-Gs-Z9s"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="Dbe-m2-bmZ"/>
+                    <navigationItem key="navigationItem" id="qoc-vr-31Z">
+                        <barButtonItem key="leftBarButtonItem" title="Retake Photo" id="8jh-LT-6TE">
+                            <connections>
+                                <action selector="retakePhoto:" destination="7AO-Og-p6O" id="bDv-U3-UzU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="G2E-PW-dge">
+                            <connections>
+                                <action selector="saveBusinessCard:" destination="7AO-Og-p6O" id="0rb-Og-Qhl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="companyTextField" destination="0da-Kw-96y" id="aua-ZK-Hc1"/>
@@ -323,6 +332,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eNb-Ob-Jgd"/>
+        <segue reference="1My-Lz-bli"/>
     </inferredMetricsTieBreakers>
 </document>
