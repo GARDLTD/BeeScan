@@ -386,6 +386,14 @@
 }
 
 
+#pragma Nav Bar Buttons
+
+- (IBAction)retakePhoto:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
+    
+}
 
 
 
