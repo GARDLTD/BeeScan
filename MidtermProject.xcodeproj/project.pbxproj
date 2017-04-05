@@ -23,6 +23,7 @@
 		3159A5C31CF4A5F100641A11 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C21CF4A5F100641A11 /* libiconv.tbd */; };
 		3159A5C51CF4A5F400641A11 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C41CF4A5F400641A11 /* Accelerate.framework */; };
 		4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */; };
+		4E3E24CC1E95B26D00232B24 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */; };
 		4E971BC61E929D6C00150D5F /* 1280px-Flag_of_England.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */; };
 		4E971BC81E92DA3600150D5F /* names.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC71E92DA3600150D5F /* names.plist */; };
 		4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */; };
@@ -52,6 +53,8 @@
 		3159A5C41CF4A5F400641A11 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		4E3E24C71E959A2700232B24 /* NewBusinessCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBusinessCardTableViewController.h; sourceTree = "<group>"; };
 		4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBusinessCardTableViewController.m; sourceTree = "<group>"; };
+		4E3E24CA1E95B26D00232B24 /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewController.h; sourceTree = "<group>"; };
+		4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListTableViewController.m; sourceTree = "<group>"; };
 		4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1280px-Flag_of_England.svg.png"; sourceTree = "<group>"; };
 		4E971BC71E92DA3600150D5F /* names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = names.plist; sourceTree = "<group>"; };
 		4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCard.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			children = (
 				4E3E24C71E959A2700232B24 /* NewBusinessCardTableViewController.h */,
 				4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */,
+				4E3E24CA1E95B26D00232B24 /* ContactListTableViewController.h */,
+				4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */,
 				7678725D1E91F09F007300E4 /* ScanningViewController.h */,
 				7678725E1E91F09F007300E4 /* ScanningViewController.m */,
 				7678725A1E91CBAD007300E4 /* NewContactViewController.h */,
@@ -227,6 +232,7 @@
 				7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */,
 				4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */,
 				4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */,
+				4E3E24CC1E95B26D00232B24 /* ContactListTableViewController.m in Sources */,
 				1873920C1AA4B1070031D6C9 /* AppDelegate.m in Sources */,
 				7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */,
 				187392091AA4B1060031D6C9 /* main.m in Sources */,
