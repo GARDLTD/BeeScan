@@ -54,69 +54,69 @@
 
 #pragma mark - Table view data source
 /*
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-*/
+ - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+ #warning Incomplete implementation, return the number of sections
+ return 0;
+ }
+ 
+ - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+ #warning Incomplete implementation, return the number of rows
+ return 0;
+ }
+ */
 /*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+ 
+ // Configure the cell...
+ 
+ return cell;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-#pragma mark - Navigation
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 
 - (void)sortMultipleStringsFromRawContactInfo{
@@ -128,7 +128,7 @@
     [self replaceVVWithW];
     
     [self replaceExclamationWithL];
-
+    
     [self accentsRemoval];
     
     [self trimSpecialCharacters];
@@ -332,7 +332,9 @@
                 if ([capitalizedComponent isEqualToString:listOfNames[g]]){
                     
                     [self.businessCard.firstNameArray addObject:[self capitaliseFirstCharacter:components[i]]];
-                    [self.businessCard.lastNameArray addObject:[self capitaliseFirstCharacter:components[i+1]]];
+                    if (i+1 > components.count) {
+                        [self.businessCard.lastNameArray addObject:[self capitaliseFirstCharacter:components[i+1]]];
+                    }
                     return;
                 }
             }
@@ -366,7 +368,7 @@
 //-(void)jobTitle:(NSString *)currentString {
 //    NSArray *componentsOfString = [currentString componentsSeparatedByString:@" "];
 //    NSArray *jobTitles = @[@"ceo", @"officer", @"chief", @"director", @"head", @"associate", @"technician", @"analyst", @"designer", @"supervisor", @"developer", @"specialist", @"administrator", @"manager", @"planner", @"consultant", @"assistant", @"strategist", @"cto",@"cfo", @"cpo", @"r2-d2", @"programmer"];
-//    
+//
 //    for (NSString *string in componentsOfString) {
 //        NSString *lowerCase = [string lowercaseString];
 //        for (NSString *jobs in jobTitles) {
@@ -399,7 +401,12 @@
         NSArray *componentsSeperatedByDotC = [lastComponent componentsSeparatedByString:@"."];
         NSString *firstComponent = componentsSeperatedByDotC[0];
         NSString *companyString = [self capitaliseFirstCharacter:firstComponent];
+        if ([companyString containsString:@"Gmail"] || [companyString containsString:@"Hotmail"] || [companyString containsString:@"Live"] || [companyString containsString:@"Outlook"] || [companyString containsString:@"Btinternet"] || [companyString containsString:@"Aol"]) {
+            NSLog(@"SHITTY EMAIL");
+        } else {
+                                                         
         [self.businessCard.companyNameArray addObject:companyString];
+        }
     }
 }
 
@@ -433,7 +440,7 @@
 - (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
     [self setContactProperties];
     [self.mainVC prepareMainVCForSegue];
-//    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
+    //    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 //
