@@ -228,7 +228,7 @@
     NSMutableArray <NSString *> *filteredStringsArray = [[NSMutableArray alloc] init];
     
     NSCharacterSet *alphaCharacterSet = [NSCharacterSet alphanumericCharacterSet];
-    NSMutableCharacterSet *whiteListCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:@"@.- "];
+    NSMutableCharacterSet *whiteListCharacters = [NSMutableCharacterSet characterSetWithCharactersInString:@"@.-, "];
     
     [whiteListCharacters formUnionWithCharacterSet:alphaCharacterSet];
     NSCharacterSet *bannedCharacters = [whiteListCharacters invertedSet];
@@ -314,7 +314,8 @@
     
     if (![currentString containsString:@"@"]) {
         
-        NSArray *components = [currentString componentsSeparatedByString:@" "];
+        NSString *replaceComma = [currentString stringByReplacingOccurrencesOfString:@"," withString:@" "];
+        NSArray *components = [replaceComma componentsSeparatedByString:@" "];
         
         NSArray *listOfNames = [[NSArray alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"names" ofType:@"plist"]];
         
