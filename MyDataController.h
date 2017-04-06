@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-
+#import "Contact+CoreDataClass.h"
 
 @interface MyDataController : NSObject
 
@@ -17,7 +17,7 @@
 
 + (id)sharedDataController;
 
--(NSArray<Contact *> *)fetchContacts
+-(NSArray<Contact *> *)fetchContacts;
 - (void)saveContext;
 
 @end
