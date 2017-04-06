@@ -27,6 +27,8 @@
 		4E971BC61E929D6C00150D5F /* 1280px-Flag_of_England.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */; };
 		4E971BC81E92DA3600150D5F /* names.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC71E92DA3600150D5F /* names.plist */; };
 		4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */; };
+		760C754B1E95BB0C00EFA7D4 /* MyDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 760C754A1E95BB0C00EFA7D4 /* MyDataController.m */; };
+		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
 		7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725B1E91CBAD007300E4 /* NewContactViewController.m */; };
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
 /* End PBXBuildFile section */
@@ -59,8 +61,11 @@
 		4E971BC71E92DA3600150D5F /* names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = names.plist; sourceTree = "<group>"; };
 		4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCard.h; sourceTree = "<group>"; };
 		4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCard.m; sourceTree = "<group>"; };
-		7678725A1E91CBAD007300E4 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewContactViewController.h; sourceTree = "<group>"; };
-		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewContactViewController.m; sourceTree = "<group>"; };
+		760C75491E95BB0C00EFA7D4 /* MyDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataController.h; sourceTree = "<group>"; };
+		760C754A1E95BB0C00EFA7D4 /* MyDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataController.m; sourceTree = "<group>"; };
+		760C75501E95C29C00EFA7D4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7678725A1E91CBAD007300E4 /* NewContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewContactViewController.h; path = ../NewContactViewController.h; sourceTree = "<group>"; };
+		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewContactViewController.m; path = ../NewContactViewController.m; sourceTree = "<group>"; };
 		7678725D1E91F09F007300E4 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		7678725E1E91F09F007300E4 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,14 +91,15 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
+				760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */,
+				760C75491E95BB0C00EFA7D4 /* MyDataController.h */,
+				760C754A1E95BB0C00EFA7D4 /* MyDataController.m */,
 				4E3E24C71E959A2700232B24 /* NewBusinessCardTableViewController.h */,
 				4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */,
 				4E3E24CA1E95B26D00232B24 /* ContactListTableViewController.h */,
 				4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */,
 				7678725D1E91F09F007300E4 /* ScanningViewController.h */,
 				7678725E1E91F09F007300E4 /* ScanningViewController.m */,
-				7678725A1E91CBAD007300E4 /* NewContactViewController.h */,
-				7678725B1E91CBAD007300E4 /* NewContactViewController.m */,
 				4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */,
 				4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */,
 				187392051AA4B1060031D6C9 /* MidtermProject */,
@@ -121,6 +127,8 @@
 				4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */,
 				187392131AA4B1070031D6C9 /* Images.xcassets */,
 				187392151AA4B1070031D6C9 /* LaunchScreen.xib */,
+				7678725A1E91CBAD007300E4 /* NewContactViewController.h */,
+				7678725B1E91CBAD007300E4 /* NewContactViewController.m */,
 				187392061AA4B1060031D6C9 /* Supporting Files */,
 			);
 			name = MidtermProject;
@@ -185,6 +193,7 @@
 					187392021AA4B1060031D6C9 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 39TU79PDJ2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -235,7 +244,9 @@
 				4E3E24CC1E95B26D00232B24 /* ContactListTableViewController.m in Sources */,
 				1873920C1AA4B1070031D6C9 /* AppDelegate.m in Sources */,
 				7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */,
+				760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */,
 				187392091AA4B1060031D6C9 /* main.m in Sources */,
+				760C754B1E95BB0C00EFA7D4 /* MyDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +378,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexdave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -381,6 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alexdave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -406,6 +419,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				760C75501E95C29C00EFA7D4 /* Model.xcdatamodel */,
+			);
+			currentVersion = 760C75501E95C29C00EFA7D4 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 187391FB1AA4B1060031D6C9 /* Project object */;
 }

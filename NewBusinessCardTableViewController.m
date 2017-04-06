@@ -7,7 +7,7 @@
 //
 
 #import "NewBusinessCardTableViewController.h"
-
+#import "MyDataController.h"
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
 //#import "CustomTableViewCell.h"
@@ -389,10 +389,11 @@
 #pragma Nav Bar Buttons
 
 - (IBAction)retakePhoto:(UIBarButtonItem *)sender {
+    //EXECUTE A SEGUE BACK TO THE CAMERA VIEW
 }
 
 - (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
-    
+    [[MyDataController sharedDataController] saveContext];
 }
 
 

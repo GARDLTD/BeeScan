@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "MyDataController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) MyDataController *myDataController;
 
 @end
 
@@ -17,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    _myDataController = [MyDataController sharedDataController];
+    
+    
     return YES;
 }
 
@@ -40,6 +46,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[MyDataController sharedDataController] saveContext];
 }
 
 @end
