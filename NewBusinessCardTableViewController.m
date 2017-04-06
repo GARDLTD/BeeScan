@@ -11,7 +11,6 @@
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
 
-#import "Contact+CoreDataProperties.h"
 
 
 
@@ -383,7 +382,6 @@
 
 
 -(NSString *)capitaliseFirstCharacter:(NSString *)string{
-    
     char firstChar = [string characterAtIndex:0];
     NSString *firtString = [NSString stringWithFormat:@"%c",firstChar];
     NSString *firstLetterCapitalised = [firtString capitalizedString];

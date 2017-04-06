@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface NewBusinessCardTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *rawContactInformation;
