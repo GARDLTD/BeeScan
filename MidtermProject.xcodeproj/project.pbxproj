@@ -30,6 +30,7 @@
 		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
 		7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725B1E91CBAD007300E4 /* NewContactViewController.m */; };
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
+		76B236631E96CE1600F0CE2F /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B236621E96CE1600F0CE2F /* DetailTableViewController.m */; };
 		76C7F56B1E969F28002B1C44 /* ContactListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,8 @@
 		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewContactViewController.m; path = ../NewContactViewController.m; sourceTree = "<group>"; };
 		7678725D1E91F09F007300E4 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		7678725E1E91F09F007300E4 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
+		76B236611E96CE1600F0CE2F /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		76B236621E96CE1600F0CE2F /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewCell.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
+				76B236611E96CE1600F0CE2F /* DetailTableViewController.h */,
+				76B236621E96CE1600F0CE2F /* DetailTableViewController.m */,
 				76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */,
 				76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */,
 				76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */,
@@ -241,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B236631E96CE1600F0CE2F /* DetailTableViewController.m in Sources */,
 				1873920F1AA4B1070031D6C9 /* ViewController.m in Sources */,
 				7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */,
 				76C7F56B1E969F28002B1C44 /* ContactListTableViewCell.m in Sources */,
