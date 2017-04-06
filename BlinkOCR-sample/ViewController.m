@@ -21,6 +21,7 @@
 #import "MyDataController.h"
 #import "Contact+CoreDataProperties.h"
 #import "ContactListTableViewCell.h"
+#import "DetailTableViewController.h"
 
 @interface ViewController () <PPScanningDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -194,6 +195,13 @@
         [newBusinessCardVC sortMultipleStringsFromRawContactInfo];
 
     }
+    if ([[segue identifier] isEqualToString:@"detailViewController"]){
+        DetailTableViewController *detailTVC = [segue destinationViewController];
+        NSIndexPath *index = (NSIndexPath *)sender;
+        [detailTVC setContact:self.contactList[index.row]];
+//        [detailTVC configureDetailViewProperties:self.contactList[index.row]];
+        
+    }
 }
 
 #pragma mark - PPScanDelegate
@@ -263,6 +271,10 @@
     [cell configureCell:self.contactList[indexPath.row]];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"detailViewController" sender:indexPath];
 }
 
 @end
