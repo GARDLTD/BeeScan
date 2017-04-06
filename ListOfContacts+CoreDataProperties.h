@@ -2,7 +2,7 @@
 //  ListOfContacts+CoreDataProperties.h
 //  MidtermProject
 //
-//  Created by David Guichon on 2017-04-05.
+//  Created by Alex Rapier on 06/04/2017.
 //  Copyright © 2017 MicroBlink. All rights reserved.
 //
 
