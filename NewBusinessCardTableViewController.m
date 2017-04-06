@@ -10,6 +10,7 @@
 #import "MyDataController.h"
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
+#import "ViewController.h"
 
 
 
@@ -415,6 +416,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"returnToListOfContacts"]){
+        //ViewController *destination = [segue destinationViewController];
         NSError *err = nil;
         [self.myDataController.managedObjectContext save:&err];
         if (err){

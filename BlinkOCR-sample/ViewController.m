@@ -45,6 +45,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     self.tableViewOutlet.delegate = self;
     self.tableViewOutlet.dataSource = self;
+    [self prepareTableView];
     [super viewWillAppear:YES];
 }
 
@@ -52,7 +53,12 @@
     [super viewDidLoad];
     self.myDataController = [MyDataController sharedDataController];
     self.rawOcrParserId = @"Raw ocr";
+    [self prepareTableView];
+}
+
+-(void)prepareTableView{
     self.contactList = [self.myDataController fetchContacts];
+    [self.tableViewOutlet reloadData];
 }
 
 
