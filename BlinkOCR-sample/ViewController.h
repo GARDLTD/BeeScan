@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelResult;
 
 - (IBAction)didTapScan:(id)sender;
+-(void)prepareTableView;
 
 @end
 
