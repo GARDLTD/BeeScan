@@ -30,6 +30,7 @@
 		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
 		7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725B1E91CBAD007300E4 /* NewContactViewController.m */; };
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
+		76C7F56B1E969F28002B1C44 /* ContactListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,10 +66,10 @@
 		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewContactViewController.m; path = ../NewContactViewController.m; sourceTree = "<group>"; };
 		7678725D1E91F09F007300E4 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		7678725E1E91F09F007300E4 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
-		76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataClass.h"; sourceTree = "<group>"; };
-		76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataClass.m"; sourceTree = "<group>"; };
 		76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewCell.h; sourceTree = "<group>"; };
+		76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +93,8 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
-				76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */,
-				76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */,
+				76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */,
+				76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */,
 				76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */,
 				76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */,
 				760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */,
@@ -242,6 +243,7 @@
 			files = (
 				1873920F1AA4B1070031D6C9 /* ViewController.m in Sources */,
 				7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */,
+				76C7F56B1E969F28002B1C44 /* ContactListTableViewCell.m in Sources */,
 				4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */,
 				4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */,
 				1873920C1AA4B1070031D6C9 /* AppDelegate.m in Sources */,
