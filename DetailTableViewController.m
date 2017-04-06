@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) MyDataController *myDatacontroller;
 
-
+@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (strong, nonatomic) IBOutlet UITextField *firstNameDetailLabel;
 @property (strong, nonatomic) IBOutlet UITextField *lastNameDetailLabel;
 @property (strong, nonatomic) IBOutlet UITextField *phoneNumberDetailLabel;

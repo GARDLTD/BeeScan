@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
 
 
 @interface NewBusinessCardTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *rawContactInformation;
+@property (nonatomic, strong) ViewController *mainVC;
 
 - (void)sortMultipleStringsFromRawContactInfo;
 

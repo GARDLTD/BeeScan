@@ -10,11 +10,6 @@
 #import "MyDataController.h"
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
-#import "ViewController.h"
-
-
-
-
 
 
 @interface NewBusinessCardTableViewController () //<UITableViewDelegate, UITableViewDataSource>
@@ -25,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray <NSString *> *filteredStrings;
 
 @property (nonatomic, strong) BusinessCard *businessCard;
+
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
@@ -431,10 +427,12 @@
 
 - (IBAction)retakePhoto:(UIBarButtonItem *)sender {
     //EXECUTE A SEGUE BACK TO THE CAMERA VIEW
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
     [self setContactProperties];
+    [self.mainVC prepareMainVCForSegue];
 //    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -48,13 +48,6 @@
     self.tableViewOutlet.dataSource = self;
     [self prepareTableView];
     [super viewWillAppear:YES];
-    if (self.scanningVC) {
-        [self.scanningVC removeFromParentViewController];
-        [self.scanningVC.view removeFromSuperview];
-        [self.photoButton removeFromSuperview];
-        self.scanningVC = nil;
-        self.photoButton = nil;
-    }
 }
 
 - (void)viewDidLoad {
@@ -68,7 +61,15 @@
     [self.tableViewOutlet reloadData];
 }
 
-
+-(void)prepareMainVCForSegue{
+    if (self.scanningVC) {
+        [self.scanningVC removeFromParentViewController];
+        [self.scanningVC.view removeFromSuperview];
+        [self.photoButton removeFromSuperview];
+        self.scanningVC = nil;
+        self.photoButton = nil;
+    }
+}
 
 /**
  * Method allocates and initializes the Scanning coordinator object.
@@ -191,6 +192,7 @@
     if ([[segue identifier] isEqualToString:@"createNewContact"]) {
         [self.scanningVC pauseScanning];
         NewBusinessCardTableViewController *newBusinessCardVC = [segue destinationViewController];
+        [newBusinessCardVC setMainVC:self];
         [newBusinessCardVC setRawContactInformation:self.rawContactInfo];
         [newBusinessCardVC sortMultipleStringsFromRawContactInfo];
 

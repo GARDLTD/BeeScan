@@ -14,6 +14,7 @@
 
 - (IBAction)didTapScan:(id)sender;
 -(void)prepareTableView;
+-(void)prepareMainVCForSegue;
 
 @end
 

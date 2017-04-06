@@ -25,7 +25,7 @@
                                     <rect key="frame" x="0.0" y="15" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <items>
-                                        <navigationItem title="Title" id="8bT-NQ-GEk">
+                                        <navigationItem title="Contact" id="8bT-NQ-GEk" userLabel="Contact">
                                             <barButtonItem key="leftBarButtonItem" title="Back" id="mQb-yK-Ef1">
                                                 <connections>
                                                     <action selector="back:" destination="zc6-RI-oAn" id="R0Z-0t-zs2"/>
@@ -202,6 +202,7 @@
                         <outlet property="emailDetailLabel" destination="bi1-tB-ZKa" id="e23-2I-rmt"/>
                         <outlet property="firstNameDetailLabel" destination="s6l-v9-W77" id="8qV-F3-HE5"/>
                         <outlet property="lastNameDetailLabel" destination="boz-HI-sEd" id="lbO-Oo-x6P"/>
+                        <outlet property="navBar" destination="pvu-Ob-ZNH" id="pWA-ma-SID"/>
                         <outlet property="phoneNumberDetailLabel" destination="2td-Nj-B0e" id="y6R-At-YQZ"/>
                         <outlet property="websiteDetailLabel" destination="33g-Jr-f2G" id="Op8-R2-51T"/>
                     </connections>
