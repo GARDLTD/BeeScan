@@ -7,13 +7,8 @@
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="contactList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ListOfContacts" inverseName="cardDeck" inverseEntity="ListOfContacts" syncable="YES"/>
-    </entity>
-    <entity name="ListOfContacts" representedClassName="ListOfContacts" syncable="YES" codeGenerationType="class">
-        <relationship name="cardDeck" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contact" inverseName="contactList" inverseEntity="Contact" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ListOfContacts" positionX="0" positionY="90" width="128" height="60"/>
-        <element name="Contact" positionX="-36" positionY="9" width="128" height="150"/>
+        <element name="Contact" positionX="-36" positionY="9" width="128" height="135"/>
     </elements>
 </model>

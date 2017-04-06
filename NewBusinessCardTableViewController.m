@@ -405,8 +405,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"returnToListOfContacts"]){
-        [self.myDataController.listOfContacts addCardDeckObject:self.contact];
-        NSError *err;
+        NSError *err = nil;
         [self.myDataController.managedObjectContext save:&err];
         if (err){
             NSLog(@"There is an error at the bottom of the NewBusinessContactViewController");

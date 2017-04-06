@@ -7,6 +7,7 @@
 //
 
 #import "MyDataController.h"
+#import "Contact+CoreDataProperties.h"
 
 
 @interface MyDataController ()
@@ -54,6 +55,14 @@
     if (error) {
         NSLog(@"There Was An Error In the My Data Controller");
     }
+}
+
+-(NSArray<Contact *> *)fetchContacts{
+    NSFetchRequest<Contact *> *request = [Contact fetchRequest];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES];
+    [request setSortDescriptors:@[sortDescriptor]];
+    NSError *error;
+    return [self.managedObjectContext executeFetchRequest:request error:&error];
 }
 
 
