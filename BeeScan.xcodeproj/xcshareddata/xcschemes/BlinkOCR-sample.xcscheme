@@ -17,7 +17,7 @@
                BlueprintIdentifier = "187392021AA4B1060031D6C9"
                BuildableName = "MidtermProject.app"
                BlueprintName = "MidtermProject"
-               ReferencedContainer = "container:MidtermProject.xcodeproj">
+               ReferencedContainer = "container:BeeScan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "187392021AA4B1060031D6C9"
             BuildableName = "MidtermProject.app"
             BlueprintName = "MidtermProject"
-            ReferencedContainer = "container:MidtermProject.xcodeproj">
+            ReferencedContainer = "container:BeeScan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "187392021AA4B1060031D6C9"
             BuildableName = "MidtermProject.app"
             BlueprintName = "MidtermProject"
-            ReferencedContainer = "container:MidtermProject.xcodeproj">
+            ReferencedContainer = "container:BeeScan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "187392021AA4B1060031D6C9"
             BuildableName = "MidtermProject.app"
             BlueprintName = "MidtermProject"
-            ReferencedContainer = "container:MidtermProject.xcodeproj">
+            ReferencedContainer = "container:BeeScan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
