@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import <MicroBlink/MicroBlink.h>
+#import "BusinessCard.h"
 
 // Set This As The Scan SEtting
 //PPRecognitionModeDefault,
@@ -18,18 +19,27 @@
 #import <MicroBlink/PPOcrResultOverlaySubview.h>
 #import <MicroBlink/PPModernOcrResultOverlaySubview.h>
 
-@interface ViewController () <PPScanningDelegate>
+@interface ViewController () <PPScanningDelegate, UITableViewDelegate, UITableViewDataSource>
+
 
 @property (nonatomic, strong) NSString* rawOcrParserId;
 @property (nonatomic, strong) UIButton* photoButton;
 @property (nonatomic, strong) UIViewController<PPScanningViewController> *scanningVC;
 @property (nonatomic, strong) NSString *rawContactInfo;
+@property (nonatomic, strong) NSArray<BusinessCard *> *temporaryArray; //REMOVE ME AFTER CORE DATA STUFF IS DONE!!!!!!
+@property (weak, nonatomic) IBOutlet UITableView *tableViewOutlet;
 
 
 
 @end
 
 @implementation ViewController
+
+-(void)viewWillAppear:(BOOL)animated {
+    self.tableViewOutlet.delegate = self;
+    self.tableViewOutlet.dataSource = self;
+    [super viewWillAppear:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -112,12 +122,12 @@
     
 //SET THE BUTTON
     float buttonWidth = self.view.frame.size.width;
-    float buttonYPosition = self.view.frame.size.height - 50;
+    float buttonYPosition = self.view.frame.size.height - 55;
     
-    self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonYPosition, buttonWidth, 50)];
+    self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonYPosition, buttonWidth, 55)];
     
     [self.photoButton addTarget:self action:@selector(didTapPhotoButton) forControlEvents:1 <<  6];
-    self.photoButton.backgroundColor = [UIColor lightGrayColor];
+    self.photoButton.backgroundColor = [[UIColor alloc]initWithRed:249 green:206 blue:106 alpha:1];
     self.photoButton.titleLabel.textColor = [UIColor whiteColor];
     [self.photoButton setTitle:@"Tap Here to Take Photo" forState:UIControlStateNormal];
     self.photoButton.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -137,7 +147,9 @@
     
     [self addChildViewController:self.scanningVC];
     
-    self.scanningVC.view.frame = CGRectInset(self.view.frame, 0, 50);
+    
+
+    self.scanningVC.view.frame = CGRectOffset(self.view.frame, 0, -55);
     [self.view addSubview:self.scanningVC.view];
     
     
@@ -211,5 +223,29 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+    //Returning one for now, more sections will be added based on what folders the user wants to place the Business Cards in.
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 6;
+    //Will later have to return the number of items in the completed cards array.
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewControllerCell" forIndexPath:indexPath];
+    return cell;
+}
+//    static NSString *identifier = @"businessCardCell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+//    BusinessCard *currentBusinessCard = self.temporaryArray[indexPath];
+//    cell.textLabel.text = currentBusinessCard.Firstname; //Will actually have to be currentBusiness.firstName;
+//    cell.textLabel.text = currentBusinessCard.lastName;
+//    cell.textLabel.text = currentBusinessCard.companyName;//Will actually have to be currentBusiness.lastName;
+//}
 
 @end
