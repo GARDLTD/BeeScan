@@ -132,8 +132,8 @@
     [self replaceVVWithW];
     
     [self replaceExclamationWithL];
-    
-    //CREATE METHOD FOR FUNKY I REPLACEMENT
+
+    [self accentsRemoval];
     
     [self trimSpecialCharacters];
     
@@ -222,6 +222,7 @@
 }
 
 
+
 //REMOVES ANY CHARACTERS THAT ARE NOT ALPHANUMERIC (EXCLUDING A FEW EXCEPTIONS
 -(void)trimSpecialCharacters{
     
@@ -262,6 +263,16 @@
         [filteredStringsArray addObject:replaceExclamationPoint];
     }
     self.filteredStrings = [[NSMutableArray alloc]initWithArray:filteredStringsArray];
+}
+
+-(void)accentsRemoval {
+    NSMutableArray <NSString *> *filteredStringsArray = [[NSMutableArray alloc]init];
+    for (NSString *string in self.filteredStrings) {
+        NSString *replaceAccent = [string stringByReplacingOccurrencesOfString:@"í" withString:@"i"];
+        [filteredStringsArray addObject:replaceAccent];
+    }
+    self.filteredStrings = [[NSMutableArray alloc]initWithArray:filteredStringsArray];
+    
 }
 
 
@@ -373,7 +384,7 @@
 
 
 -(void)websiteStringGetter:(NSString *)currentString {
-    if ([currentString containsString:@".c"] && [currentString containsString:@"www."]) {
+    if ([currentString containsString:@".c"] && ![currentString containsString:@"@"]) {
         [self.businessCard.websiteArray addObject:currentString];
     }
 }

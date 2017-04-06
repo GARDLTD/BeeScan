@@ -93,11 +93,8 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */,
 				76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */,
->>>>>>> f0b99593eac0d917a5b19f5e482df890e3b0ab66
 				76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */,
 				76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */,
 				760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */,
