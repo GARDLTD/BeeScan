@@ -168,7 +168,17 @@
     }
 }
 
-
+-(void)setContactProperties{
+    self.contact.firstName = self.firstNameTextField.text;
+    self.contact.lastName = self.lastNameTextField.text;
+    self.contact.phoneNumber = self.phoneNumberTextField.text;
+    self.contact.email = self.emailTextField.text;
+    self.contact.company = self.companyTextField.text;
+    self.contact.website = self.websiteTextField.text;
+    NSError *err;
+    [self.myDataController.managedObjectContext save:&err];
+    // TODO: check error
+}
 
 
 
@@ -410,21 +420,22 @@
 }
 
 - (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
-    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
+    [self setContactProperties];
+//    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"returnToListOfContacts"]){
-        //ViewController *destination = [segue destinationViewController];
-        NSError *err = nil;
-        [self.myDataController.managedObjectContext save:&err];
-        if (err){
-            NSLog(@"There is an error at the bottom of the NewBusinessContactViewController");
-        }
-    }
-}
-
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([segue.identifier isEqualToString:@"returnToListOfContacts"]){
+//        //ViewController *destination = [segue destinationViewController];
+//        NSError *err = nil;
+//        [self.myDataController.managedObjectContext save:&err];
+//        if (err){
+//            NSLog(@"There is an error at the bottom of the NewBusinessContactViewController");
+//        }
+//    }
+//}
+//
 
 
 

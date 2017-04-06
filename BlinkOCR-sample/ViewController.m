@@ -47,13 +47,19 @@
     self.tableViewOutlet.dataSource = self;
     [self prepareTableView];
     [super viewWillAppear:YES];
+    if (self.scanningVC) {
+        [self.scanningVC removeFromParentViewController];
+        [self.scanningVC.view removeFromSuperview];
+        [self.photoButton removeFromSuperview];
+        self.scanningVC = nil;
+        self.photoButton = nil;
+    }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.myDataController = [MyDataController sharedDataController];
     self.rawOcrParserId = @"Raw ocr";
-    [self prepareTableView];
 }
 
 -(void)prepareTableView{
@@ -253,17 +259,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    ContactListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactListCell" forIndexPath:indexPath];
+    ContactListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactListCell" forIndexPath:indexPath];
     [cell configureCell:self.contactList[indexPath.row]];
     
     return cell;
 }
-//    static NSString *identifier = @"businessCardCell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-//    BusinessCard *currentBusinessCard = self.temporaryArray[indexPath];
-//    cell.textLabel.text = currentBusinessCard.Firstname; //Will actually have to be currentBusiness.firstName;
-//    cell.textLabel.text = currentBusinessCard.lastName;
-//    cell.textLabel.text = currentBusinessCard.companyName;//Will actually have to be currentBusiness.lastName;
-//}
 
 @end

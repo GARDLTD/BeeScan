@@ -327,7 +327,6 @@
                                             <barButtonItem key="rightBarButtonItem" title="Save   " id="fhy-TY-ddB">
                                                 <connections>
                                                     <action selector="saveBusinessCard:" destination="7AO-Og-p6O" id="Xyo-dZ-lNk"/>
-                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="returnToListOfContacts" id="VbZ-in-Vp6"/>
                                                 </connections>
                                             </barButtonItem>
                                         </navigationItem>

@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _myDataController = [MyDataController sharedDataController];
+    [self.myDataController setManagedObjectContext];
     return YES;
 }
 

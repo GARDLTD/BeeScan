@@ -17,6 +17,7 @@
 
 + (id)sharedDataController;
 
+- (void)setManagedObjectContext;
 -(NSArray<Contact *> *)fetchContacts;
 - (void)saveContext;
 
