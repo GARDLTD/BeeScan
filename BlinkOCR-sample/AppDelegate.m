@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MyDataController.h"
-#import "ListOfContacts+CoreDataProperties.h"
+#import "ListOfContacts+CoreDataClass.h"
 
 @interface AppDelegate ()
 
