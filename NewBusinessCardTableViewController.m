@@ -345,7 +345,6 @@
 }
 
 
-
 -(void)phoneStringGetter:(NSString *)currentString {
     
     //Loops through every item in the array.
@@ -367,6 +366,21 @@
         return;
     }
 }
+
+//-(void)jobTitle:(NSString *)currentString {
+//    NSArray *componentsOfString = [currentString componentsSeparatedByString:@" "];
+//    NSArray *jobTitles = @[@"ceo", @"officer", @"chief", @"director", @"head", @"associate", @"technician", @"analyst", @"designer", @"supervisor", @"developer", @"specialist", @"administrator", @"manager", @"planner", @"consultant", @"assistant", @"strategist", @"cto",@"cfo", @"cpo", @"r2-d2", @"programmer"];
+//    
+//    for (NSString *string in componentsOfString) {
+//        NSString *lowerCase = [string lowercaseString];
+//        for (NSString *jobs in jobTitles) {
+//            if ([lowerCase containsString:jobs]) {
+//                [self.businessCard.titleArray addObject:lowerCase];
+//                return;
+//            }
+//        }
+//    }
+//}
 
 
 -(void)emailStringGetter:(NSString *)currentString {
