@@ -111,14 +111,26 @@
    self.scanningVC = [PPViewControllerFactory cameraViewControllerWithDelegate:self coordinator:coordinator error:nil];
     
 //SET THE BUTTON
-    float buttonXPosition = self.view.frame.size.width / 2;
+    float buttonWidth = self.view.frame.size.width;
     float buttonYPosition = self.view.frame.size.height - 50;
     
-    self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(buttonXPosition, buttonYPosition, 50, 50)];
+    self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonYPosition, buttonWidth, 50)];
+    
     [self.photoButton addTarget:self action:@selector(didTapPhotoButton) forControlEvents:1 <<  6];
-    self.photoButton.backgroundColor = [UIColor redColor];
+    self.photoButton.backgroundColor = [UIColor lightGrayColor];
+    self.photoButton.titleLabel.textColor = [UIColor whiteColor];
+    [self.photoButton setTitle:@"Tap Here to Take Photo" forState:UIControlStateNormal];
+    self.photoButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+    
     
     [self.view addSubview:self.photoButton];
+
+    
+
+    
+    
+    
+    
     
     /** You can use other presentation methods as well */
     //[self presentViewController:scanningViewController animated:YES completion:nil];
