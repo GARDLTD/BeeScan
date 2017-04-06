@@ -246,8 +246,8 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewControllerCell" forIndexPath:indexPath];
-    //[cell configureCell:self.contactList[indexPath.row]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactListCell" forIndexPath:indexPath];
+    [cell configureCell:self.contactList[indexPath.row]];
     
     return cell;
 }

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contact+CoreDataProperties.h"
 
 @interface ContactListTableViewCell : UITableViewCell
 
+-(void)configureCell:(Contact *)contact;
+
 @end
+

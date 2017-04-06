@@ -7,7 +7,15 @@
 //
 
 #import "ContactListTableViewCell.h"
-#import "Contact+CoreDataProperties.h"
+
+@interface ContactListTableViewCell ()
+
+@property (strong, nonatomic) IBOutlet UILabel *firstAndLastNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *companyNameLabel;
+
+
+@end
+
 
 @implementation ContactListTableViewCell
 
@@ -23,8 +31,8 @@
 }
 
 -(void)configureCell:(Contact *)contact{
-    //SET THE CELL PROPERTIES
-    //FIRST NAME, LAST NAME, COMPANY NAME
+    self.firstAndLastNameLabel.text = [NSString stringWithFormat:@"%@ %@", contact.firstName, contact.lastName];
+    self.companyNameLabel.text = [NSString stringWithFormat:@"%@", contact.company];
 }
 
 @end
