@@ -20,6 +20,7 @@
 #import <MicroBlink/PPModernOcrResultOverlaySubview.h>
 #import "MyDataController.h"
 #import "Contact+CoreDataProperties.h"
+#import "ContactListTableViewCell.h"
 
 @interface ViewController () <PPScanningDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -246,7 +247,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactListCell" forIndexPath:indexPath];
+    ContactListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactListCell" forIndexPath:indexPath];
     [cell configureCell:self.contactList[indexPath.row]];
     
     return cell;
