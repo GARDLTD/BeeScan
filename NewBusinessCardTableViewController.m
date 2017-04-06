@@ -10,7 +10,8 @@
 #import "MyDataController.h"
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
-//#import "CustomTableViewCell.h"
+
+#import "Contact+CoreDataProperties.h"
 
 
 
@@ -31,6 +32,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *websiteTextField;
+
+@property (strong, nonatomic) Contact *contact;
+@property (weak, nonatomic) MyDataController *myDataController;
 
 @end
 
@@ -175,6 +179,8 @@
     self.rawInfoStrings = [self.rawContactInformation componentsSeparatedByString:@"\n"];
     self.filteredStrings = [[NSMutableArray alloc] initWithArray:self.rawInfoStrings];
     self.businessCard = [[BusinessCard alloc] init];
+    self.myDataController = [MyDataController sharedDataController];
+    self.contact = [[Contact alloc] initWithContext:self.myDataController.managedObjectContext];
 }
 
 
@@ -393,8 +399,22 @@
 }
 
 - (IBAction)saveBusinessCard:(UIBarButtonItem *)sender {
-    [[MyDataController sharedDataController] saveContext];
+    [self performSegueWithIdentifier:@"returnToListOfContacts" sender:sender];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"returnToListOfContacts"]){
+        [self.myDataController.listOfContacts addCardDeckObject:self.contact];
+        NSError *err;
+        [self.myDataController.managedObjectContext save:&err];
+        if (err){
+            NSLog(@"There is an error at the bottom of the NewBusinessContactViewController");
+        }
+    }
+}
+
+
 
 
 

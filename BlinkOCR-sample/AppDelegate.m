@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MyDataController.h"
+#import "ListOfContacts+CoreDataProperties.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     _myDataController = [MyDataController sharedDataController];
+    
+    if (![ListOfContacts fetchRequest]){
+        ListOfContacts *listOfContacts = [[ListOfContacts alloc] initWithContext:self.myDataController.managedObjectContext];
+    }
     
     
     return YES;

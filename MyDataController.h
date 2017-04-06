@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "ListOfContacts+CoreDataClass.h"
 
 @interface MyDataController : NSObject
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) ListOfContacts *listOfContacts;
 
 + (id)sharedDataController;
 
