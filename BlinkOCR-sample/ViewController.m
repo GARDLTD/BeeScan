@@ -136,7 +136,7 @@
     self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonYPosition, buttonWidth, 55)];
     
     [self.photoButton addTarget:self action:@selector(didTapPhotoButton) forControlEvents:1 <<  6];
-    self.photoButton.backgroundColor = [[UIColor alloc]initWithRed:249 green:206 blue:106 alpha:1];
+    self.photoButton.backgroundColor = [UIColor lightGrayColor];
     self.photoButton.titleLabel.textColor = [UIColor whiteColor];
     [self.photoButton setTitle:@"Tap Here to Take Photo" forState:UIControlStateNormal];
     self.photoButton.titleLabel.textAlignment = NSTextAlignmentCenter;
