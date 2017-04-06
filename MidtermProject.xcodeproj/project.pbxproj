@@ -23,7 +23,6 @@
 		3159A5C31CF4A5F100641A11 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C21CF4A5F100641A11 /* libiconv.tbd */; };
 		3159A5C51CF4A5F400641A11 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3159A5C41CF4A5F400641A11 /* Accelerate.framework */; };
 		4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */; };
-		4E3E24CC1E95B26D00232B24 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */; };
 		4E971BC61E929D6C00150D5F /* 1280px-Flag_of_England.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */; };
 		4E971BC81E92DA3600150D5F /* names.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC71E92DA3600150D5F /* names.plist */; };
 		4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */; };
@@ -31,6 +30,7 @@
 		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
 		7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725B1E91CBAD007300E4 /* NewContactViewController.m */; };
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
+		76C7F55A1E95E31C002B1C44 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +68,14 @@
 		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewContactViewController.m; path = ../NewContactViewController.m; sourceTree = "<group>"; };
 		7678725D1E91F09F007300E4 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		7678725E1E91F09F007300E4 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
+		76C7F55D1E95E454002B1C44 /* ListOfContacts+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListOfContacts+CoreDataClass.h"; sourceTree = "<group>"; };
+		76C7F55E1E95E454002B1C44 /* ListOfContacts+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListOfContacts+CoreDataClass.m"; sourceTree = "<group>"; };
+		76C7F55F1E95E454002B1C44 /* ListOfContacts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListOfContacts+CoreDataProperties.h"; sourceTree = "<group>"; };
+		76C7F5601E95E454002B1C44 /* ListOfContacts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListOfContacts+CoreDataProperties.m"; sourceTree = "<group>"; };
+		76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataClass.h"; sourceTree = "<group>"; };
+		76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataClass.m"; sourceTree = "<group>"; };
+		76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,14 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
+				76C7F55D1E95E454002B1C44 /* ListOfContacts+CoreDataClass.h */,
+				76C7F55E1E95E454002B1C44 /* ListOfContacts+CoreDataClass.m */,
+				76C7F55F1E95E454002B1C44 /* ListOfContacts+CoreDataProperties.h */,
+				76C7F5601E95E454002B1C44 /* ListOfContacts+CoreDataProperties.m */,
+				76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */,
+				76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */,
+				76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */,
+				76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */,
 				760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */,
 				760C75491E95BB0C00EFA7D4 /* MyDataController.h */,
 				760C754A1E95BB0C00EFA7D4 /* MyDataController.m */,
@@ -237,11 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C7F55A1E95E31C002B1C44 /* ContactListTableViewController.m in Sources */,
 				1873920F1AA4B1070031D6C9 /* ViewController.m in Sources */,
 				7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */,
 				4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */,
 				4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */,
-				4E3E24CC1E95B26D00232B24 /* ContactListTableViewController.m in Sources */,
 				1873920C1AA4B1070031D6C9 /* AppDelegate.m in Sources */,
 				7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */,
 				760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */,

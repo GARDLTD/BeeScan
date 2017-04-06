@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5684438F0D01D38361FFCB6DC47D9E4B8B33C388",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5684438F0D01D38361FFCB6DC47D9E4B8B33C388" : 9223372036854775807,
+    "7EC42D762DEB375B21BAD91AF5BA0187A5785A77" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1718B316-E7AA-45B5-A964-B30FCEB05E1C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5684438F0D01D38361FFCB6DC47D9E4B8B33C388" : "BeeScan\/",
+    "7EC42D762DEB375B21BAD91AF5BA0187A5785A77" : "..\/..\/MidtermProject"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MidtermProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MidtermProject.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GARDLTD\/BeeScan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5684438F0D01D38361FFCB6DC47D9E4B8B33C388"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GARDLTD\/MidtermProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EC42D762DEB375B21BAD91AF5BA0187A5785A77"
+    }
+  ]
+}
