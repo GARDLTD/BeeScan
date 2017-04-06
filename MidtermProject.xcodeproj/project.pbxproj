@@ -30,7 +30,6 @@
 		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
 		7678725C1E91CBAD007300E4 /* NewContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725B1E91CBAD007300E4 /* NewContactViewController.m */; };
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
-		76C7F55A1E95E31C002B1C44 /* ContactListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,12 +54,6 @@
 		3159A5C41CF4A5F400641A11 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		4E3E24C71E959A2700232B24 /* NewBusinessCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBusinessCardTableViewController.h; sourceTree = "<group>"; };
 		4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBusinessCardTableViewController.m; sourceTree = "<group>"; };
-		4E3E24CA1E95B26D00232B24 /* ContactListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewController.h; sourceTree = "<group>"; };
-		4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactListTableViewController.m; sourceTree = "<group>"; };
-		4E3E24D01E9689F500232B24 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4E3E24D11E9689F500232B24 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
-		4E3E24D21E9689F500232B24 /* ListOfContacts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListOfContacts+CoreDataProperties.h"; sourceTree = "<group>"; };
-		4E3E24D31E9689F500232B24 /* ListOfContacts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListOfContacts+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1280px-Flag_of_England.svg.png"; sourceTree = "<group>"; };
 		4E971BC71E92DA3600150D5F /* names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = names.plist; sourceTree = "<group>"; };
 		4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCard.h; sourceTree = "<group>"; };
@@ -72,8 +65,6 @@
 		7678725B1E91CBAD007300E4 /* NewContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewContactViewController.m; path = ../NewContactViewController.m; sourceTree = "<group>"; };
 		7678725D1E91F09F007300E4 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		7678725E1E91F09F007300E4 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
-		76C7F55F1E95E454002B1C44 /* ListOfContacts+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ListOfContacts+CoreDataProperties.h"; sourceTree = "<group>"; };
-		76C7F5601E95E454002B1C44 /* ListOfContacts+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ListOfContacts+CoreDataProperties.m"; sourceTree = "<group>"; };
 		76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataClass.h"; sourceTree = "<group>"; };
 		76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataClass.m"; sourceTree = "<group>"; };
 		76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -101,8 +92,6 @@
 		187391FA1AA4B1060031D6C9 = {
 			isa = PBXGroup;
 			children = (
-				76C7F55F1E95E454002B1C44 /* ListOfContacts+CoreDataProperties.h */,
-				76C7F5601E95E454002B1C44 /* ListOfContacts+CoreDataProperties.m */,
 				76C7F5611E95E454002B1C44 /* Contact+CoreDataClass.h */,
 				76C7F5621E95E454002B1C44 /* Contact+CoreDataClass.m */,
 				76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */,
@@ -112,8 +101,6 @@
 				760C754A1E95BB0C00EFA7D4 /* MyDataController.m */,
 				4E3E24C71E959A2700232B24 /* NewBusinessCardTableViewController.h */,
 				4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */,
-				4E3E24CA1E95B26D00232B24 /* ContactListTableViewController.h */,
-				4E3E24CB1E95B26D00232B24 /* ContactListTableViewController.m */,
 				7678725D1E91F09F007300E4 /* ScanningViewController.h */,
 				7678725E1E91F09F007300E4 /* ScanningViewController.m */,
 				4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */,
@@ -253,7 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C7F55A1E95E31C002B1C44 /* ContactListTableViewController.m in Sources */,
 				1873920F1AA4B1070031D6C9 /* ViewController.m in Sources */,
 				7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */,
 				4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */,

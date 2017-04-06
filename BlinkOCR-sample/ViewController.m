@@ -18,6 +18,8 @@
 #import "NewBusinessCardTableViewController.h"
 #import <MicroBlink/PPOcrResultOverlaySubview.h>
 #import <MicroBlink/PPModernOcrResultOverlaySubview.h>
+#import "MyDataController.h"
+#import "Contact+CoreDataProperties.h"
 
 @interface ViewController () <PPScanningDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -27,6 +29,10 @@
 @property (nonatomic, strong) UIViewController<PPScanningViewController> *scanningVC;
 @property (nonatomic, strong) NSString *rawContactInfo;
 @property (nonatomic, strong) NSArray<BusinessCard *> *temporaryArray; //REMOVE ME AFTER CORE DATA STUFF IS DONE!!!!!!
+
+@property (nonatomic, strong) MyDataController *myDataController;
+@property (nonatomic, strong) NSArray<Contact *> *contactList;
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOutlet;
 
 
@@ -43,9 +49,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.myDataController = [MyDataController sharedDataController];
     self.rawOcrParserId = @"Raw ocr";
+    self.contactList = [self.myDataController fetchContacts];
 }
+
+
 
 /**
  * Method allocates and initializes the Scanning coordinator object.
@@ -231,13 +240,15 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    return self.contactList.count;
     //Will later have to return the number of items in the completed cards array.
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"viewControllerCell" forIndexPath:indexPath];
+    //[cell configureCell:self.contactList[indexPath.row]];
+    
     return cell;
 }
 //    static NSString *identifier = @"businessCardCell";
