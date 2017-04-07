@@ -30,7 +30,6 @@
 @property (nonatomic, strong) UIButton* photoButton;
 @property (nonatomic, strong) UIViewController<PPScanningViewController> *scanningVC;
 @property (nonatomic, strong) NSString *rawContactInfo;
-@property (nonatomic, strong) NSArray<BusinessCard *> *temporaryArray; //REMOVE ME AFTER CORE DATA STUFF IS DONE!!!!!!
 
 @property (nonatomic, strong) MyDataController *myDataController;
 @property (nonatomic, strong) NSArray<Contact *> *contactList;
