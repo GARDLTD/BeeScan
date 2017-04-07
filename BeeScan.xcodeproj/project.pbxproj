@@ -25,6 +25,7 @@
 		4E3E24C91E959A2700232B24 /* NewBusinessCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */; };
 		4E971BC61E929D6C00150D5F /* 1280px-Flag_of_England.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */; };
 		4E971BC81E92DA3600150D5F /* names.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E971BC71E92DA3600150D5F /* names.plist */; };
+		4EC0E9FC1E97103B004264D4 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC0E9FB1E97103B004264D4 /* iTunesArtwork.png */; };
 		4ED3AC7E1E93ED4D00543E76 /* BusinessCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */; };
 		760C754B1E95BB0C00EFA7D4 /* MyDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 760C754A1E95BB0C00EFA7D4 /* MyDataController.m */; };
 		760C75511E95C29C00EFA7D4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 760C754F1E95C29C00EFA7D4 /* Model.xcdatamodeld */; };
@@ -32,7 +33,6 @@
 		7678725F1E91F09F007300E4 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7678725E1E91F09F007300E4 /* ScanningViewController.m */; };
 		76B236631E96CE1600F0CE2F /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B236621E96CE1600F0CE2F /* DetailTableViewController.m */; };
 		76C0C4C41E970A86007F5EC2 /* ipad-app-76pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76C0C4C31E970A86007F5EC2 /* ipad-app-76pt@2x.png */; };
-		76C0C4C81E970CB6007F5EC2 /* Launch Screen Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 76C0C4C71E970CB6007F5EC2 /* Launch Screen Image.png */; };
 		76C7F56B1E969F28002B1C44 /* ContactListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C7F56A1E969F28002B1C44 /* ContactListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,7 @@
 		4E3E24C81E959A2700232B24 /* NewBusinessCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBusinessCardTableViewController.m; sourceTree = "<group>"; };
 		4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1280px-Flag_of_England.svg.png"; sourceTree = "<group>"; };
 		4E971BC71E92DA3600150D5F /* names.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = names.plist; sourceTree = "<group>"; };
+		4EC0E9FB1E97103B004264D4 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		4ED3AC7C1E93ED4D00543E76 /* BusinessCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessCard.h; sourceTree = "<group>"; };
 		4ED3AC7D1E93ED4D00543E76 /* BusinessCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessCard.m; sourceTree = "<group>"; };
 		760C75491E95BB0C00EFA7D4 /* MyDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataController.h; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		76B236611E96CE1600F0CE2F /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		76B236621E96CE1600F0CE2F /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		76C0C4C31E970A86007F5EC2 /* ipad-app-76pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad-app-76pt@2x.png"; sourceTree = "<group>"; };
-		76C0C4C71E970CB6007F5EC2 /* Launch Screen Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Launch Screen Image.png"; sourceTree = "<group>"; };
 		76C7F5631E95E454002B1C44 /* Contact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Contact+CoreDataProperties.h"; sourceTree = "<group>"; };
 		76C7F5641E95E454002B1C44 /* Contact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Contact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		76C7F5691E969F28002B1C44 /* ContactListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactListTableViewCell.h; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				4E971BC51E929D6C00150D5F /* 1280px-Flag_of_England.svg.png */,
 				187392131AA4B1070031D6C9 /* Images.xcassets */,
 				76C0C4C31E970A86007F5EC2 /* ipad-app-76pt@2x.png */,
-				76C0C4C71E970CB6007F5EC2 /* Launch Screen Image.png */,
+				4EC0E9FB1E97103B004264D4 /* iTunesArtwork.png */,
 				187392151AA4B1070031D6C9 /* LaunchScreen.xib */,
 				7678725A1E91CBAD007300E4 /* NewContactViewController.h */,
 				7678725B1E91CBAD007300E4 /* NewContactViewController.m */,
@@ -237,12 +237,12 @@
 			files = (
 				4E971BC81E92DA3600150D5F /* names.plist in Resources */,
 				3159A58B1CF4805D00641A11 /* MicroBlink.bundle in Resources */,
-				76C0C4C81E970CB6007F5EC2 /* Launch Screen Image.png in Resources */,
 				4E971BC61E929D6C00150D5F /* 1280px-Flag_of_England.svg.png in Resources */,
 				76C0C4C41E970A86007F5EC2 /* ipad-app-76pt@2x.png in Resources */,
 				187392121AA4B1070031D6C9 /* Main.storyboard in Resources */,
 				187392171AA4B1070031D6C9 /* LaunchScreen.xib in Resources */,
 				186226B71AB1B0A6002D71E5 /* en.strings in Resources */,
+				4EC0E9FC1E97103B004264D4 /* iTunesArtwork.png in Resources */,
 				187392141AA4B1070031D6C9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

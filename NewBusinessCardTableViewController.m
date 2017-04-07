@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.tableView setSeparatorColor:[UIColor colorWithRed:205.0/255.0   green:154.0/255.0 blue:0.0/255.0 alpha:1.0]];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
