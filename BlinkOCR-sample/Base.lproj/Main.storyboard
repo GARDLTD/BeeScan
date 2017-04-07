@@ -243,7 +243,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h5c-e2-NZM">
                                 <rect key="frame" x="0.0" y="64" width="320" height="459"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" red="0.96781820058822632" green="0.88531225919723511" blue="0.0" alpha="0.81402504280821919" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="1" blue="0.0" alpha="0.51134417808219179" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactListCell" id="kM1-dp-jOc" customClass="ContactListTableViewCell">
@@ -269,7 +269,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.015758775684931507" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.054286172945205477" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="companyNameLabel" destination="Oba-rL-cJq" id="bce-8E-iaS"/>
                                             <outlet property="firstAndLastNameLabel" destination="EPg-tw-1DF" id="0ap-gS-Azw"/>
