@@ -332,7 +332,7 @@
                 if ([capitalizedComponent isEqualToString:listOfNames[g]]){
                     
                     [self.businessCard.firstNameArray addObject:[self capitaliseFirstCharacter:components[i]]];
-                    if (i+1 > components.count) {
+                    if (i + 1 <= components.count) {
                         [self.businessCard.lastNameArray addObject:[self capitaliseFirstCharacter:components[i+1]]];
                     }
                     return;
