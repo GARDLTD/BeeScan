@@ -21,6 +21,7 @@
 
 @property (nonatomic, strong) BusinessCard *businessCard;
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameTextField;
@@ -44,6 +45,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIImage *barImage = [UIImage imageNamed:@"bar"];
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    [navBar setBackgroundImage:barImage forBarMetrics:UIBarMetricsDefault];
     [self setTextFieldPropertiesFromBusinessCard];
 }
 

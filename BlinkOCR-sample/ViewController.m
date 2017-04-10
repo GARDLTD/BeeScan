@@ -42,6 +42,8 @@
     self.tableViewOutlet.dataSource = self;
     [self prepareTableView];
     [super viewWillAppear:YES];
+
+
 }
 
 - (void)viewDidLoad {

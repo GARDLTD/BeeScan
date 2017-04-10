@@ -22,6 +22,8 @@
     // Override point for customization after application launch.
     _myDataController = [MyDataController sharedDataController];
     [self.myDataController setManagedObjectContext];
+    [application setStatusBarHidden:YES];
+
     return YES;
 }
 
