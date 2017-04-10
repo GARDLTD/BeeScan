@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -308,9 +308,12 @@
                                     <constraint firstItem="qGX-6e-ZMK" firstAttribute="top" secondItem="hgx-aX-Nvb" secondAttribute="top" id="qYp-Fu-QWh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqX-7q-ljh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqX-7q-ljh">
                                 <rect key="frame" x="128" y="496" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="kEk-vE-Woc"/>
+                                    <constraint firstAttribute="height" constant="64" id="y8j-FT-MWp"/>
+                                </constraints>
                                 <state key="normal" image="camera">
                                     <color key="titleColor" red="0.46661311389999999" green="0.4666974545" blue="0.4666077495" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -323,6 +326,8 @@
                         <constraints>
                             <constraint firstItem="CXD-JX-IG1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Cs-dO-TJV"/>
                             <constraint firstAttribute="trailing" secondItem="hgx-aX-Nvb" secondAttribute="trailing" id="4Er-tE-fKb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mqX-7q-ljh" secondAttribute="bottom" constant="8" id="5vu-QX-SJD"/>
+                            <constraint firstItem="mqX-7q-ljh" firstAttribute="centerX" secondItem="h5c-e2-NZM" secondAttribute="centerX" id="Df1-do-w1C"/>
                             <constraint firstItem="h5c-e2-NZM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GRa-ja-DT9"/>
                             <constraint firstItem="CXD-JX-IG1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IKF-rk-IHc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hgx-aX-Nvb" secondAttribute="bottom" id="VZL-do-fnk"/>
@@ -336,7 +341,7 @@
                     <navigationItem key="navigationItem" id="k2j-HU-rGa"/>
                     <connections>
                         <outlet property="tableViewOutlet" destination="h5c-e2-NZM" id="387-tL-E6j"/>
-                        <segue destination="7AO-Og-p6O" kind="presentation" identifier="createNewContact" id="eNb-Ob-Jgd"/>
+                        <segue destination="7AO-Og-p6O" kind="presentation" identifier="singleContact" id="eNb-Ob-Jgd"/>
                         <segue destination="zc6-RI-oAn" kind="presentation" identifier="detailViewController" id="UWD-nG-wP4"/>
                     </connections>
                 </viewController>
@@ -344,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="2835" y="-685"/>
         </scene>
-        <!--New Business Card Table View Controller-->
+        <!--Single Contact Table View Controller-->
         <scene sceneID="h1h-1F-g5X">
             <objects>
-                <tableViewController id="7AO-Og-p6O" customClass="NewBusinessCardTableViewController" sceneMemberID="viewController">
+                <tableViewController id="7AO-Og-p6O" customClass="SingleContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="exp-i5-5Ot">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

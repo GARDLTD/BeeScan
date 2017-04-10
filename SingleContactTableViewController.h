@@ -1,5 +1,5 @@
 //
-//  NewBusinessCardTableViewController.h
+//  SingleContactTableViewController.h
 //  MidtermProject
 //
 //  Created by Alex Rapier on 05/04/2017.
@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
+#import "Contact+CoreDataProperties.h"
 
 
-@interface NewBusinessCardTableViewController : UITableViewController
+@interface SingleContactTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *rawContactInformation;
 @property (nonatomic, strong) ViewController *mainVC;
+@property (strong, nonatomic) Contact *contact;
 
 - (void)sortMultipleStringsFromRawContactInfo;
+-(void)setOutletProperties;
 
 @end

@@ -24,8 +24,6 @@
         _companyNameArray = [[NSMutableArray alloc] init];
         _contactInfoDictionary = [[NSMutableDictionary alloc] init];
         _contactInfoArray = [[NSMutableArray alloc] init];
-        
-        
     }
     return self;
 }

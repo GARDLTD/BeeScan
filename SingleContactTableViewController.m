@@ -1,18 +1,18 @@
 //
-//  NewBusinessCardTableViewController.m
+//  SingleContactTableViewController.m
 //  MidtermProject
 //
 //  Created by Alex Rapier on 05/04/2017.
 //  Copyright © 2017 MicroBlink. All rights reserved.
 //
 
-#import "NewBusinessCardTableViewController.h"
+#import "SingleContactTableViewController.h"
 #import "MyDataController.h"
 #import "NewContactViewController.h"
 #import "BusinessCard.h"
 
 
-@interface NewBusinessCardTableViewController () //<UITableViewDelegate, UITableViewDataSource>
+@interface SingleContactTableViewController () //<UITableViewDelegate, UITableViewDataSource>
 
 
 
@@ -29,12 +29,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *companyTextField;
 @property (weak, nonatomic) IBOutlet UITextField *websiteTextField;
 
-@property (strong, nonatomic) Contact *contact;
+
 @property (weak, nonatomic) MyDataController *myDataController;
 
 @end
 
-@implementation NewBusinessCardTableViewController
+@implementation SingleContactTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -427,6 +427,16 @@
     NSString *firstLetterCapitalised = [firtString capitalizedString];
     NSString *finalString = [string.lowercaseString stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstLetterCapitalised];
     return finalString;
+}
+
+
+-(void)setOutletProperties{
+    self.firstNameTextField.text = self.contact.firstName;
+    self.lastNameTextField.text = self.contact.lastName;
+    self.phoneNumberTextField.text = self.contact.phoneNumber;
+    self.emailTextField.text = self.contact.email;
+    self.companyTextField.text = self.contact.company;
+    self.websiteTextField.text = self.contact.website;
 }
 
 

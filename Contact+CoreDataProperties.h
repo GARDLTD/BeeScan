@@ -1,8 +1,8 @@
 //
 //  Contact+CoreDataProperties.h
-//  MidtermProject
+//  BeeScan
 //
-//  Created by Alex Rapier on 06/04/2017.
+//  Created by David Guichon on 2017-04-10.
 //  Copyright © 2017 MicroBlink. All rights reserved.
 //
 
@@ -21,7 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *lastName;
 @property (nullable, nonatomic, copy) NSString *phoneNumber;
 @property (nullable, nonatomic, copy) NSString *website;
-
 
 @end
 

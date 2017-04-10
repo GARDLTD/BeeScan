@@ -10,12 +10,7 @@
 
 #import <MicroBlink/MicroBlink.h>
 #import "BusinessCard.h"
-
-// Set This As The Scan SEtting
-//PPRecognitionModeDefault,
-
-
-#import "NewBusinessCardTableViewController.h"
+#import "SingleContactTableViewController.h"
 #import <MicroBlink/PPOcrResultOverlaySubview.h>
 #import <MicroBlink/PPModernOcrResultOverlaySubview.h>
 #import "MyDataController.h"
@@ -32,7 +27,7 @@
 @property (nonatomic, strong) NSString *rawContactInfo;
 
 @property (nonatomic, strong) MyDataController *myDataController;
-@property (nonatomic, strong) NSArray<Contact *> *contactList;
+@property (nonatomic, strong) NSArray <Contact *> *contactList;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOutlet;
 
@@ -146,7 +141,6 @@
 //SET THE BUTTON
     float buttonWidth = self.view.frame.size.width;
     float buttonYPosition = self.view.frame.size.height - 55;
-    s
     self.photoButton = [[UIButton alloc] initWithFrame:CGRectMake(0, buttonYPosition, buttonWidth, 60)];
     
     [self.photoButton addTarget:self action:@selector(didTapPhotoButton) forControlEvents:1 <<  6];
@@ -174,27 +168,47 @@
 
 
 -(IBAction)didTapPhotoButton{
-    [self performSegueWithIdentifier:@"createNewContact" sender:nil];
+    [self performSegueWithIdentifier:@"singleContact" sender:nil];
 
 
     
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"createNewContact"]) {
-        [self.scanningVC pauseScanning];
-        NewBusinessCardTableViewController *newBusinessCardVC = [segue destinationViewController];
-        [newBusinessCardVC setMainVC:self];
-        [newBusinessCardVC setRawContactInformation:self.rawContactInfo];
-        [newBusinessCardVC sortMultipleStringsFromRawContactInfo];
-
-    }
-    if ([[segue identifier] isEqualToString:@"detailViewController"]){
-        DetailTableViewController *detailTVC = [segue destinationViewController];
-        NSIndexPath *index = (NSIndexPath *)sender;
-        [detailTVC setContact:self.contactList[index.row]];
+//    if ([[segue identifier] isEqualToString:@"createNewContact"]) {
+//        [self.scanningVC pauseScanning];
+//        NewBusinessCardTableViewController *newBusinessCardVC = [segue destinationViewController];
+//        [newBusinessCardVC setMainVC:self];
+//        [newBusinessCardVC setRawContactInformation:self.rawContactInfo];
+//        [newBusinessCardVC sortMultipleStringsFromRawContactInfo];
+//        }
+//    if ([[segue identifier] isEqualToString:@"detailViewController"]){
+//        DetailTableViewController *detailTVC = [segue destinationViewController];
+//      NSIndexPath *index = self.tableViewOutlet.indexPathForSelectedRow;
+//        [detailTVC setContact:self.contactList[self.tableViewOutlet.indexPathForSelectedRow]];
 //        [detailTVC configureDetailViewProperties:self.contactList[index.row]];
+//
+//    }
+    if ([[segue identifier] isEqualToString:@"singleContact"]) {
+        if (self.scanningVC) {
+            [self.scanningVC pauseScanning];
+            SingleContactTableViewController *singleContactVC = [segue destinationViewController];
+            [singleContactVC setMainVC:self];
+            [singleContactVC setRawContactInformation:self.rawContactInfo];
+            [singleContactVC sortMultipleStringsFromRawContactInfo];
+            return;
+        }
         
+            
+            
+        //RENAME VIEW CONTROLLER
+        //SET IT AS THE DESTINATION VIEW CONTROLLER
+        SingleContactTableViewController *singleContactVC = [segue destinationViewController];
+        [singleContactVC setMainVC:self];
+        NSIndexPath *index = self.tableViewOutlet.indexPathForSelectedRow;
+        Contact *contact = self.contactList[index.row];
+        [singleContactVC setContact:contact];
+        [singleContactVC setOutletProperties];
     }
 }
 
@@ -268,7 +282,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self performSegueWithIdentifier:@"detailViewController" sender:indexPath];
+    [self performSegueWithIdentifier:@"singleContact" sender:nil];
 }
 
 @end
